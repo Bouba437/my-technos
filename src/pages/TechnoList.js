@@ -1,3 +1,5 @@
+import TechnoItem from "../components/TechnoItem";
+
 export default function TechnoList(props) {
     const { technos } = props;
     return (
@@ -7,13 +9,7 @@ export default function TechnoList(props) {
                 {
                     technos.map( techno => {
                         return (
-                            <div key={techno.technoId}>
-                                <h2>{techno.technoname}</h2>
-                                <h3>Catégorie</h3>
-                                <p>{techno.technocategory}</p>
-                                <h3>Description</h3>
-                                <p>{techno.description}</p>
-                            </div>
+                            <TechnoItem techno={techno} key={techno.technoId} />
                         )
                     })
                 }
